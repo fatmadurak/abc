@@ -1,10 +1,11 @@
 import React from 'react'
 import { Formik, Field, Form } from 'formik';
 import { UseTodo } from '../context/TodoContext';
+import { validation } from './Validation';
 
 function FormTodo() {
  
-    const {addTodo,todos}=UseTodo();
+    const {addTodo}=UseTodo();
 
 
 
@@ -17,9 +18,14 @@ function FormTodo() {
     onSubmit={(values,bag) => {
      
      addTodo(values.text)
-     console.log(todos)
+   
+
      bag.resetForm();
     }}
+
+    validationSchema={validation}
+
+ 
   >
     <Form >
       

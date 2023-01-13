@@ -23,6 +23,7 @@ setTodos([...todos,{id:uuidv4(),text}])
 const values={
     todos,
     setTodos,
+    addTodo,
 }
 
 

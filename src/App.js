@@ -1,6 +1,6 @@
-import Index from "./components/Header/Index";
+import Header from "./components/Header/Index";
 import { TodoProvider } from "./context/TodoContext";
-
+import Content from "./components/Content/Index"
 
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
     <>
     <TodoProvider>
  
-    <Index/>
+    <Header/>
+    <Content/>
     </TodoProvider>
     </>
   );
