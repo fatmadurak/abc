@@ -10,20 +10,7 @@ function List() {
     
 
 
-   
-   <ul className="todo-list">
 
-{
-    todos.map((todo)=>(
-
-    <ListItem key={todo.id} todo={todo}/>
-
-     
-     ))
-
-}
-
-</ul>
  
    
 
