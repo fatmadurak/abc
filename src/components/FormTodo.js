@@ -4,7 +4,9 @@ import { UseTodo } from '../context/TodoContext';
 
 function FormTodo() {
  
-    const {todos,setTodos}=UseTodo();
+    const {addTodo,todos}=UseTodo();
+
+
 
   return (
     <Formik
@@ -14,11 +16,12 @@ function FormTodo() {
     }}
     onSubmit={(values,bag) => {
      
-    
+     addTodo(values.text)
+     console.log(todos)
      bag.resetForm();
     }}
   >
-    <Form>
+    <Form >
       
       <Field id="text" name="text" placeholder="we needs be done?" />
 

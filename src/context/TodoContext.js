@@ -1,11 +1,24 @@
 import { createContext,useContext,useState } from "react";
+import {v4 as uuidv4} from "uuid"
 
 const TodoContext=createContext();
 
 
 export const TodoProvider=({children})=>{
 
-const{todos,setTodos}=useState([]);
+const{todos,setTodos}=useState([{
+
+id:1,
+text:"react çalış",
+
+
+}]);
+
+const addTodo=(text)=>{
+
+setTodos([...todos,{id:uuidv4(),text}])
+
+}
 
 const values={
     todos,
